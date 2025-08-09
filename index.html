@@ -5,138 +5,237 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feliz Dia dos Pais - Homenagem Especial</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Progress Bar -->
+
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <p>Carregando homenagem especial... 💙</p>
+    </div>
+  </div>
+
+
   <div class="progress-bar" id="progressBar"></div>
 
-  <!-- Header -->
+
+  <nav class="nav-menu" id="navMenu">
+    <div class="nav-header">
+      <span class="nav-title">Menu</span>
+      <button class="nav-close" id="navClose">&times;</button>
+    </div>
+    <div class="nav-links">
+      <a href="#hero" class="nav-link">
+        <span class="nav-icon">🏠</span>
+        <span>Início</span>
+      </a>
+      <a href="#messages" class="nav-link">
+        <span class="nav-icon">💌</span>
+        <span>Mensagens</span>
+      </a>
+      <a href="#gallery" class="nav-link">
+        <span class="nav-icon">📸</span>
+        <span>Galeria</span>
+      </a>
+      <a href="#quote" class="nav-link">
+        <span class="nav-icon">💭</span>
+        <span>Citação</span>
+      </a>
+    </div>
+  </nav>
+
+
   <header id="header">
-    <h1>🌊 Homenagem ao Melhor Pai do Mundo</h1>
+    <div class="header-content">
+      <div class="header-logo">
+        <span class="logo-icon">🌊</span>
+        <h1>Homenagem Especial</h1>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <!-- Decorative Elements -->
+  <section class="hero" id="hero">
+
+    <div class="hero-bg">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+    </div>
+
+ 
     <div class="hero-decoration gear">⚙️</div>
     <div class="hero-decoration car">🚗</div>
     <div class="hero-decoration palm">🌴</div>
-    <div class="hero-decoration wave">🌊</div>
+    <div class="hero-decoration wave-emoji">🌊</div>
 
     <div class="hero-content">
-      <h2>Feliz Dia dos Pais!</h2>
-      <p>Você é nossa inspiração, nosso guia e o melhor companheiro de viagem. Obrigado por cada momento especial. 💙</p>
+      <div class="hero-badge">Dia dos Pais 2025</div>
+      <h2 id="heroTitle">Feliz Dia dos Pais!</h2>
+      <p id="heroText">Você é nossa inspiração, nosso guia e o melhor companheiro de viagem. Obrigado por cada momento especial.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="scrollToSection('messages')">
+          <span>Ver Mensagens</span>
+          <span class="btn-icon">💙</span>
+        </button>
+        <button class="btn btn-secondary" onclick="scrollToSection('gallery')">
+          <span>Ver Fotos</span>
+          <span class="btn-icon">📸</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="floating-elements">
+      <div class="float-item" style="--delay: 0s">💙</div>
+      <div class="float-item" style="--delay: 1s">🌊</div>
+      <div class="float-item" style="--delay: 2s">🚗</div>
+      <div class="float-item" style="--delay: 3s">⚙️</div>
+      <div class="float-item" style="--delay: 4s">🌴</div>
     </div>
   </section>
 
-  <!-- Messages Section -->
-  <section class="section">
+
+  <section class="section messages-section" id="messages">
     <div class="container">
-      <h3>⚙️ Mensagens Especiais</h3>
+      <div class="section-header">
+        <div class="section-badge">Mensagens Especiais</div>
+        <h3>⚙️ Palavras do Coração</h3>
+        <p>Cada palavra carrega o amor e admiração que sentimos por você</p>
+      </div>
 
-      <div class="card-grid">
-        <div class="card">
-          <h4>🌱 Detalhes Valiosos</h4>
-          <p>Seu cuidado com as pequenas coisas inspira atenção, carinho e dedicação.</p>
+      <div class="cards-container">
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-header">
+            <div class="card-icon">🌱</div>
+            <h4>Detalhes Valiosos</h4>
+          </div>
+          <div class="card-content">
+            <p>Seu cuidado com as pequenas coisas inspira atenção, carinho e dedicação em tudo que fazemos.</p>
+          </div>
+          <div class="card-footer">
+            <div class="card-accent"></div>
+          </div>
         </div>
 
-        <div class="card">
-          <h4>🚗 Nosso Piloto</h4>
-          <p>Com você, toda viagem é segura e cheia de histórias. Até Maceió parece logo ali quando estamos juntos.</p>
+        <div class="card featured" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-header">
+            <div class="card-icon">🚗</div>
+            <h4>Nosso Piloto</h4>
+          </div>
+          <div class="card-content">
+            <p>Com você, toda viagem é segura e cheia de histórias. Até Maceió parece logo ali quando estamos juntos.</p>
+          </div>
+          <div class="card-footer">
+            <div class="card-accent"></div>
+          </div>
         </div>
 
-        <div class="card">
-          <h4>🌴 Paz de Mar</h4>
-          <p>Sua presença lembra o mar de Maceió: serena, firme e cheia de vida. Obrigado por ser nosso porto seguro.</p>
+        <div class="card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-header">
+            <div class="card-icon">🌴</div>
+            <h4>Paz de Mar</h4>
+          </div>
+          <div class="card-content">
+            <p>Sua presença lembra o mar de Maceió: serena, firme e cheia de vida. Obrigado por ser nosso porto seguro.</p>
+          </div>
+          <div class="card-footer">
+            <div class="card-accent"></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section class="gallery-section">
+
+  <section class="gallery-section" id="gallery">
     <div class="container">
-      <h3>📸 Momentos Especiais</h3>
-      <p class="gallery-description">
-        Cada foto conta uma história, cada sorriso guarda uma memória. Aqui estão alguns dos nossos momentos mais
-        preciosos juntos.
-      </p>
+      <div class="section-header">
+        <div class="section-badge"></div>
+        <h3>📸 Memórias Preciosas</h3>
+        <p>Cada foto conta uma história, cada sorriso guarda uma memória especial</p>
+      </div>
 
       <div class="gallery-grid">
-        <!-- Photo 1 -->
-        <div class="gallery-item">
-          <div class="photo-placeholder beach">
-            <img src="/placeholder.svg?height=400&width=400&text=Praia+de+Pajuçara" alt="Momento especial na praia" />
-          </div>
-          <div class="photo-overlay">
-            <div class="photo-info">
-              <p class="photo-title">Praia de Pajuçara</p>
-              <p class="photo-subtitle">Nosso lugar favorito</p>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+          <div class="photo-container beach">
+            <img src="Imagem do WhatsApp de 2025-08-08 à(s) 23.21.44_caa53571.jpg" loading="lazy" />
+            <div class="photo-overlay">
+              <div class="photo-play">
+                <span>👁️</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Photo 2 -->
-        <div class="gallery-item">
-          <div class="photo-placeholder driving">
-            <img src="/placeholder.svg?height=400&width=400&text=Primeira+Aula" alt="Aprendendo a dirigir" />
-          </div>
-          <div class="photo-overlay">
-            <div class="photo-info">
-              <p class="photo-title">Primeira Aula</p>
-              <p class="photo-subtitle">Paciência de pai</p>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+          <div class="photo-container driving">
+            <img src="Imagem do WhatsApp de 2025-08-08 à(s) 23.21.59_1a987bfe.jpg"  loading="lazy" />
+            <div class="photo-overlay">
+              <div class="photo-play">
+                <span>👁️</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Photo 3 -->
-        <div class="gallery-item">
-          <div class="photo-placeholder working">
-            <img src="/placeholder.svg?height=400&width=400&text=Mãos+à+Obra" alt="Trabalhando juntos" />
-          </div>
-          <div class="photo-overlay">
-            <div class="photo-info">
-              <p class="photo-title">Mãos à Obra</p>
-              <p class="photo-subtitle">Aprendendo com o mestre</p>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+          <div class="photo-container working">
+            <img src="Imagem do WhatsApp de 2025-08-08 à(s) 23.22.10_bf0d2313.jpg"  loading="lazy" />
+            <div class="photo-overlay">
+              <div class="photo-play">
+                <span>👁️</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Photo 4 -->
-        <div class="gallery-item">
-          <div class="photo-placeholder family">
-            <img src="/placeholder.svg?height=400&width=400&text=Domingo+em+Família" alt="Almoço em família" />
-          </div>
-          <div class="photo-overlay">
-            <div class="photo-info">
-              <p class="photo-title">Domingo em Família</p>
-              <p class="photo-subtitle">Tradição sagrada</p>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+          <div class="photo-container family">
+            <img src="Imagem do WhatsApp de 2025-08-08 à(s) 23.22.26_fbe720ad.jpg"  loading="lazy" />
+            <div class="photo-overlay">
+              <div class="photo-play">
+                <span>👁️</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Photo 5 -->
-        <div class="gallery-item">
-          <div class="photo-placeholder fishing">
-            <img src="/placeholder.svg?height=400&width=400&text=Pescaria" alt="Pescaria no mar" />
-          </div>
-          <div class="photo-overlay">
-            <div class="photo-info">
-              <p class="photo-title">Pescaria</p>
-              <p class="photo-subtitle">Paciência e conversa</p>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+          <div class="photo-container fishing">
+            <img src="Imagem do WhatsApp de 2025-08-08 à(s) 23.22.36_e4858f9a.jpg" loading="lazy" />
+            <div class="photo-overlay">
+              <div class="photo-play">
+                <span>👁️</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Photo 6 -->
-        <div class="gallery-item">
-          <div class="photo-placeholder football">
-            <img src="/placeholder.svg?height=400&width=400&text=Jogo+do+Coração" alt="Assistindo futebol" />
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+          <div class="photo-container football">
+            <img src="Imagem do WhatsApp de 2025-08-08 à(s) 23.22.52_0d7d98b9.jpg" loading="lazy" />
+            <div class="photo-overlay">
+              <div class="photo-play">
+                <span>👁️</span>
+              </div>
+            </div>
           </div>
-          <div class="photo-overlay">
-            <div class="photo-info">
-              <p class="photo-title">Jogo do Coração</p>
-              <p class="photo-subtitle">Torcida em família</p>
+        </div>
+
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+          <div class="photo-container football">
+            <img src="Imagem do WhatsApp de 2025-08-08 à(s) 23.22.52_65ebb9d2.jpg"  loading="lazy" />
+            <div class="photo-overlay">
+              <div class="photo-play">
+                <span>👁️</span>
+              </div>
             </div>
           </div>
         </div>
@@ -144,20 +243,67 @@
     </div>
   </section>
 
-  <!-- Quote Section -->
-  <section class="quote">
+
+  <section class="quote-section" id="quote">
+    <div class="quote-bg">
+      <div class="quote-pattern"></div>
+    </div>
     <div class="container">
-      <div class="quote-container">
-        <p>"Ser pai é como o mar de Maceió: profundo, acolhedor e cheio de beleza em cada onda."</p>
-        <span>- Com amor 💙</span>
+      <div class="quote-container" data-aos="fade-up">
+        <div class="quote-icon">💙</div>
+        <blockquote>
+          <p>"Ser pai é como o mar de Maceió: profundo, acolhedor e cheio de beleza em cada onda."</p>
+        </blockquote>
+        <cite>- Com amor infinito</cite>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Dia dos Pais | Homenagem feita com carinho e saudade das praias. 🌴💙</p>
+ 
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-main">
+          <div class="footer-logo">
+            <span class="logo-icon">🌊</span>
+            <span>Homenagem Especial</span>
+          </div>
+          <p>Feito com muito carinho e saudade das praias de Maceió</p>
+        </div>
+        <div class="footer-actions">
+          <button onclick="scrollToTop()" class="footer-btn">
+            <span>Voltar ao Topo</span>
+            <span>↑</span>
+          </button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Dia dos Pais | Uma homenagem especial 🌴💙</p>
+      </div>
+    </div>
   </footer>
+
+
+  <div class="audio-player" id="audioPlayer">
+    <div class="player-controls">
+      <button id="playPauseBtn" class="play-btn" aria-label="Reproduzir música">
+        <span class="play-icon">▶️</span>
+        <span class="play-text">Play</span>
+      </button>
+      <div class="volume-container">
+        <span class="volume-icon">🔊</span>
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.7" class="volume-slider">
+      </div>
+    </div>
+    <audio id="backgroundMusic" loop preload="metadata">
+      <source src="SpotiDownloader.com - Thunderstruck - AC_DC.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+    <span>↑</span>
+  </button>
 
   <script src="script.js"></script>
 </body>
